@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 6.0
 
 import PackageDescription
 
@@ -16,7 +16,9 @@ let package = Package(
             name: "TestPackage",
             path: "Sources",
             swiftSettings: [
+                .swiftLanguageMode(.v6),
                 .enableUpcomingFeature("ExistentialAny"),
+                .enableUpcomingFeature("InternalImportsByDefault"),
                 .enableExperimentalFeature("AccessLevelOnImport")
             ]
         )
